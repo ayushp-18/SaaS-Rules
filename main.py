@@ -34,7 +34,6 @@ groq_api_key=st.secrets['GROQ_API_KEY']
 #Setting up streamlit
 st.title("Identifying Red flags in a SAAS document")
 st.write("Upload pdf to see the red flags")
-temperature=st.slider("Set your temperature as you require",0.0,1.0,0.7)
 
 llm=ChatGroq(groq_api_key=groq_api_key,model_name="llama-3.1-70b-versatile",temperature=temperature)
 
