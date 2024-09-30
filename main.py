@@ -34,6 +34,7 @@ groq_api_key=st.secrets['GROQ_API_KEY']
 #Setting up streamlit
 st.title("Identifying Red flags in a SAAS document")
 st.write("Upload pdf to see the red flags")
+temperature = 0.7
 
 llm=ChatGroq(groq_api_key=groq_api_key,model_name="llama-3.1-70b-versatile",temperature=temperature)
 
@@ -51,7 +52,7 @@ if uploaded_documents:
         documents.extend(docs)
 
 
-
+    
     text_splitter3=RecursiveCharacterTextSplitter(chunk_size=5000,chunk_overlap=600)
     chunks3=text_splitter3.split_documents(documents) 
     # vector_store=FAISS.from_documents(documents=chunks3,embedding=embeddings)
