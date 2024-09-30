@@ -1,6 +1,6 @@
+streamlit
 langchain
 openai
-streamlit
 torch
 python-dotenv
 ipykernel
