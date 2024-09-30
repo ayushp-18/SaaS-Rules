@@ -136,7 +136,7 @@ if uploaded_documents:
 
     map_prompt_template=PromptTemplate(input_variables=['text'],template=chunks_prompt1)
     final_prompt='''
-    Provide the final summary of the entire Terms and conditions that should be highlighted to the cutomer for taking an informed and good decision keeping the most important 20 solid points.
+    Provide the red flags of the entire Terms and conditions that should be highlighted to the cutomer for taking an informed and good decision keeping the most important 20 solid points.
     Document:{text}
 
     '''
